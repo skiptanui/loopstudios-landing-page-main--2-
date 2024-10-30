@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <style>
+      h1 {
+        opacity: 0.4;
+        transition: transform 1s linear;
+      }
+      h1:hover {
+        opacity: 1;
+        transform: translate(20px, 10px);
+      }
+      /* define keyframes -- define multiple instances/groups of properties at different stages of the animation. e.g. 0%, 30% 80% */
+
+      @keyframes shake {
+        0% {
+          transform: translate(0);
+          background-color: red;
+        }
+        20% {
+          transform: translateX(50px);
+          background-color: green;
+        }
+        80% {
+          transform: translateX(-50px);
+          background-color: blue;
+        }
+        100% {
+          transform: translateX(0);
+          background-color: brown;
+        }
+      }
+      p {
+        width: 400px;
+        padding: 20px;
+        border: 2px solid black;
+        animation: shake 1s linear 5s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Animations</h1>
+    <p>Transition effect/property provides simple form of animations</p>
+  </body>
+</html>
